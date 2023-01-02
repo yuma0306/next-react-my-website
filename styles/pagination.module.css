@@ -1,15 +1,16 @@
-.flexContainer {
-  composes: spaceBetween from 'styles/utils.module.css';
-  margin: var(--space-lg) 0;
-  gap: 1em;
-}
-
-.next {
-  margin-left: auto;
-}
-
-.iconText {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
+/* pc */
+@media (min-width: 769px) {
+  .flexContainer {
+    composes: spaceBetween from 'styles/utils.module.css';
+    margin-top: min(var(--compPc) * 80, 80px);;
+    gap: 1em;
+  }
+  .next {
+    margin-left: auto;
+  }
+  .iconText {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
 }

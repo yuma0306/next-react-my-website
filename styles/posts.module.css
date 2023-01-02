@@ -1,19 +1,19 @@
-.gridContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-jump);
-  margin-top: var(--space-xs);
-  margin-bottom: var(--space-lg);
-}
-
-.post h2 {
-  margin-top: 0.5em;
-  font-size: var(--small-heading3);
-  font-weight: 400;
-}
-
-.post picture {
-  display: block;
-  position: relative;
-  aspect-ratio: 16/9;
+/* pc */
+@media (min-width: 769px) {
+  .gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: min(var(--compPc) * 50, 50px);
+    margin-top: min(var(--compPc) * 50, 50px);
+  }
+  .post h2 {
+    margin-top: min(var(--compPc) * 10, 10px);
+    font-size: clamp(16px, var(--compPc) * 22, 22px);
+    font-weight: 400;
+  }
+  .post picture {
+    display: block;
+    position: relative;
+    aspect-ratio: 16/9;
+  }
 }

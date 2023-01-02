@@ -1,41 +1,22 @@
+/* custom */
 :root {
-  /* pcクランプかminで行けそう */
-  /* sp 以下で解決できそう？ */
   /* リキッドの数値（vw） = 現在の画面幅の100%の数値（vw） / カンプの横幅（基準値）* カンプの対象の数値 */
-  /* padding-top: calc(var(--comp) * 10); */
-
-  /* デザインカンプ幅 */
-  --comp: 100vw / 375;
-
-  /* カラー（色） */
+  /* comp */
+  --compSp: 100vw / 375;
+  --compPc: 100vw / 1440;
+  /* color */
   --subColor: #DCF8C4;
   --mainColor: #43964A;
   --white: #ffffff;
-  --gray-10: #eeeeee;
-  --gray-25: #aaaaaa;
+  --gray-10: #eee;
+  --gray-25: #aaa;
   --gray-50: #707070;
-  --gray-75: #444444;
-  --black: #222222;
-  --accent: #0d87e0;
-
-  /* タイポグラフィ（フォントサイズ） */
-  --body: clamp(1rem, 0.95rem + 0.2vw, 1.125rem); /* 16-18px */
-  --display: clamp(4.5rem, 1.83rem + 11.34vw, 10rem); /* 72-160 */
-  --heading1: clamp(2rem, 1.3rem + 3vw, 4rem); /* 32-64px */
-  --heading2: calc(var(--body) * 1.5); /* 24-27px */
-  --heading3: calc(var(--body) * 1.2); /* 19.2-21.6px */
-  --small-heading2: clamp(16px, 4vw - 1rem, 1.6875rem); /* 14-27px */
-  --small-heading3: calc(var(--small-heading2) * 0.86); /* 12-23px */
-
-  /* スペース（余白・間隔） */
-  --space-xs: clamp(1.25rem, 1rem + 0.98vw, 1.875rem); /* 20-30px */
-  --space-sm: calc(var(--space-xs) * 1.5); /* 30-45px */
-  --space-md: calc(var(--space-xs) * 2); /* 40-60px */
-  --space-lg: calc(var(--space-xs) * 3); /* 60-90px */
-  --space-xl: calc(var(--space-xs) * 4); /* 80-120px */
-  --space-jump: clamp(1.25rem, 0.35rem + 3.8vw, 3.75rem); /* 20-60px */
+  --gray-75: #444;
+  --black: #333;
+  /* fontSize */
 }
 
+/* base */
 body {
   color: var(--black);
   font-family: 'Noto Sans JP', sans-serif;
@@ -52,13 +33,26 @@ img {
 	width: 100%;
 	object-fit: cover;
 }
-p,li,dd {
-  line-height: 1.8;
-}
 picture {
   display: block;
 }
 a:hover {
   opacity: .8;
   transition: opacity .3s;
+}
+
+/* pc */
+@media (min-width: 769px) {
+  p,li,dd {
+    line-height: 1.8;
+    font-size: 16px;
+  }
+}
+
+/* sp */
+@media (max-width: 768px) {
+  p,li,dd {
+    line-height: 1.8;
+    font-size: calc(var(--comp) * 18);
+  }
 }

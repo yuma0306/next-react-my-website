@@ -1,9 +1,7 @@
-.default {
-  width: min(92%, 1152px);
-  margin: 0 auto;
-}
-
-.large {
-  composes: default;
-  max-width: 1280px;
+/* pc */
+@media (min-width: 769px) {
+  .default {
+    width: min(var(--compPc) * 1152, 1152px);
+    margin: 0 auto;
+  }
 }

@@ -1,17 +1,26 @@
-.flexContainer {
-  composes: sideBySideCenter from 'styles/utils.module.css'
+/* pc */
+@media (min-width: 769px) {
+  .flexContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .block {
+    width: 45%;
+    text-align: center;
+  }
+  .title {
+    composes: uH1 from './utils.module.css';
+  }
+  .subtitle {
+    composes: uSubTtl from './utils.module.css';
+  }
+  .pic {
+    width: 55%;
+  }
 }
 
-.text {
-  padding: calc(var(--display)) 0 calc(var(--display) * 0.7);
+/* sp */
+@media (max-width: 768px) {
 }
 
-.title {
-  font-size: var(--display);
-  font-weight: 900;
-  letter-spacing: .15em;
-}
-
-.subtitle {
-  font-size: var(--small-heading2);
-}
