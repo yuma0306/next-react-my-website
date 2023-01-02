@@ -7,7 +7,7 @@ import Container from 'components/container'
 import PostBody from 'components/postBody'
 import Contact from 'components/contact'
 import Accordion from 'components/accordion'
-import { TwoColumn, TwoColumnMain, TwoColumnSidebar } from 'components/twoColumn'
+import { TwoColumn, TwoColumnMain, TwoColumnSidebar } from 'components/two-column'
 // import eyecatch from '/images/about.jpg'
 const eyecatch = {
   src: 'https://images.microcms-assets.io/assets/ea4e7c9023f14705809e4bd7c4ab8422/470843c369af4239b64b6e8807f883a5/about.jpg',
