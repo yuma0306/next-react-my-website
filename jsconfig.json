@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    // 絶対パスで読み込み
+    "baseUrl": "."
+  }
+}
