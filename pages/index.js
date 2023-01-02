@@ -15,7 +15,7 @@ export default function Home( {posts} ) {
       <Meta />
       <Container>
         <Hero
-          title="CUBE"
+          title="DevHoly"
           subtitle="アウトプットしていくサイト"
           imageOn
         />

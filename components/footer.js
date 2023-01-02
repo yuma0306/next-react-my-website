@@ -1,15 +1,17 @@
-import styles from '/styles/header.module.css'
-import Logo from '/components/logo'
-import Container from '/components/container'
-import Social from '/components/social'
+import Container from 'components/container'
+import Logo from 'components/logo'
+import Social from 'components/social'
+import styles from 'styles/footer.module.css'
 
 export default function Footer() {
   return (
-    <Container>
-      <footer>
-        <Logo />
-        <Social />
-      </footer>
-    </Container>
+    <footer className={styles.wrapper}>
+      <Container>
+        <div className={styles.flexContainer}>
+          <Logo />
+          <Social />
+        </div>
+      </Container>
+    </footer>
   )
 }

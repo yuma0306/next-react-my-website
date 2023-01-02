@@ -1,7 +1,5 @@
 import styles from '/styles/hero.module.css';
-import Image from 'next/legacy/image'
-// import eyecatch from '/images/dinosaur.png'
-import eyecatch from 'images/cube.jpg'
+// import Image from 'next/legacy/image'
 
 export default function Hero({ title, subtitle, imageOn = false }) {
   return (

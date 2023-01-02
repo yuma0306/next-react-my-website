@@ -36,50 +36,29 @@
   --space-jump: clamp(1.25rem, 0.35rem + 3.8vw, 3.75rem); /* 20-60px */
 }
 
-/* 基本設定 */
 body {
   color: var(--black);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,sans-serif;
-  font-size: var(--body);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  overflow-x: hidden;
+  word-break: break-all;
+  letter-spacing: .02em;
+  line-height: 1;
 }
-
-h1 {
-  font-size: var(--heading1);
+img {
+  display: block;
+  max-width :100%;
+	width: 100%;
+	object-fit: cover;
 }
-
-h2 {
-  font-size: var(--heading2);
+p,li,dd {
+  line-height: 1.8;
 }
-
-h3 {
-  font-size: var(--heading3);
+picture {
+  display: block;
 }
-
-/* next/legacy/image */
-span > img {
-  transition: 0.2s;
-}
-
-/* リセット */
-body,
-h1,
-h2,
-h3,
-p,
-figure,
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+a:hover {
+  opacity: .8;
+  transition: opacity .3s;
 }

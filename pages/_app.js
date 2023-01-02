@@ -1,4 +1,5 @@
 import '/styles/globals.css'
+import 'styles/reset.css'
 import Layout from '/components/layout'
 
 // Font Awesomeの設定

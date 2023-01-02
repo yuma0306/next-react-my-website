@@ -93,7 +93,7 @@
 /* ホバー */
 @media (hover: hover) {
   .list a:hover {
-    color: var(--accent);
+    color: var(--mainColor);
   }
 }
 
@@ -103,6 +103,6 @@
   }
 
   .list a:active {
-    color: var(--accent);
+    color: var(--mainColor);
   }
 }
