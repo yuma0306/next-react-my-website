@@ -43,7 +43,6 @@ export default function Meta({ pageTitle, pageDesc, pageImg, pageImgW, pageImgH 
       <meta property="og:image:width" content={imgW} />
       <meta property="og:image:height" content={imgH} />
       <meta name="twitter:card" content="summary_large_image" />
-
     </Head>
   )
 }

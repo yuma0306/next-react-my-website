@@ -4,7 +4,31 @@
     display: flex;
     gap: 1.5em;
   }
+  .footerList {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+  }
   .item {
-    font-size: clamp(20px, var(--compPc) * 24, 24px);
+    font-size: var(--ttl02);
+  }
+}
+
+/* sp */
+@media (max-width: 768px) {
+  .list {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+  }
+  .footerList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    gap: 1.5em;
+  }
+  .item {
+    font-size: var(--ttl02);
   }
 }

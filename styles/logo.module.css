@@ -1,15 +1,35 @@
 /* pc */
 @media (min-width: 769px) {
   .basic {
-    font-size: 20px;
+    font-size: var(--medium);
     font-weight: 700;
     letter-spacing: 0.15em;
   }
   .box {
     composes: basic;
     display: inline-block;
-    padding: min(var(--compPc) * 28, 28px) min(var(--compPc) * 56, 56px);
-    background-color: var(--subColor);
-    color: var(--mainColor);
+    padding: 28px 56px;
+    background-color: var(--black);
+    color: var(--white);
   }
 }
+
+/* sp */
+@media (max-width: 768px) {
+  .basic {
+    display: block;
+    font-size: var(--medium);
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-align: center;
+  }
+  .box {
+    composes: basic;
+    display: inline-block;
+    margin-left: calc(-1 * var(--innerSpace));
+    padding: calc(var(--compSp) * 15);
+    background-color: var(--black);
+    color: var(--white);
+  }
+}
+

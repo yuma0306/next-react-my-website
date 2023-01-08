@@ -3,12 +3,32 @@
   .gridContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: min(var(--compPc) * 50, 50px);
-    margin-top: min(var(--compPc) * 50, 50px);
+    gap: 50px;
+    margin-top: var(--contentSpace);
   }
   .post h2 {
-    margin-top: min(var(--compPc) * 10, 10px);
-    font-size: clamp(16px, var(--compPc) * 22, 22px);
+    margin-top: 10px;
+    font-size: var(--medium);
+    font-weight: 400;
+  }
+  .post picture {
+    display: block;
+    position: relative;
+    aspect-ratio: 16/9;
+  }
+}
+
+/* sp */
+@media (max-width: 768px) {
+  .gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: calc(var(--compSp) * 15);
+    margin-top: var(--contentSpace)
+  }
+  .post h2 {
+    margin-top: calc(var(--compSp) * 10);
+    font-size: var(--medium);
     font-weight: 400;
   }
   .post picture {

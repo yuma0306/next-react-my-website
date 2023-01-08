@@ -177,7 +177,7 @@ samp {
  */
 
 small {
-	font-size: 80%;
+	font-size: inherit;
 }
 
 /**
@@ -187,9 +187,9 @@ small {
 
 sub,
 sup {
-	font-size: 75%;
 	line-height: 0;
 	position: relative;
+	font-size: inherit;
 	vertical-align: baseline;
 }
 

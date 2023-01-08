@@ -3,34 +3,67 @@
   /* リキッドの数値（vw） = 現在の画面幅の100%の数値（vw） / カンプの横幅（基準値）* カンプの対象の数値 */
   /* comp */
   --compSp: 100vw / 375;
-  --compPc: 100vw / 1440;
+  /* --compPc: 100vw / 1440; */
   /* color */
-  --subColor: #DCF8C4;
+  --subColor: #DCF8C0;
   --mainColor: #43964A;
-  --white: #ffffff;
-  --gray-10: #eee;
-  --gray-25: #aaa;
-  --gray-50: #707070;
-  --gray-75: #444;
+  --deepColor: darkgreen;
+  --white: #fff;
+  --grayLight: #eee;
+  --grayMedium: #aaa;
+  --grayDeep: #707070;
   --black: #333;
-  /* fontSize */
+  --black02: #000;
+}
+
+/* custom pc */
+@media (min-width: 769px) {
+  :root {
+    /* fontSize */
+    --ttlHero: 80px;
+    --ttl01: 30px;
+    --ttl02: 25px;
+    --ttl03: 22px;
+    --medium: 20px;
+    --base: 16px;
+    /* space */
+    --layoutSpace: 60px;
+    --contentSpace: 40px;
+    --innerSpace: 1152px;
+    --mainSpace: 800px;
+    --sidebarSpace: calc(100% - var(--mainSpace) - var(--contentSpace));
+  }
+}
+
+/* custom sp */
+@media (max-width: 768px) {
+  :root {
+    /* fontSize */
+    --ttlHero: calc(var(--compSp) * 60);
+    --ttl01: calc(var(--compSp) * 24);
+    --ttl02: calc(var(--compSp) * 22);
+    --ttl03: calc(var(--compSp) * 20);
+    --medium: calc(var(--compSp) * 18);
+    --base: calc(var(--compSp) * 16);
+    /* space */
+    --layoutSpace: calc(var(--compSp) * 50);
+    --contentSpace: calc(var(--compSp) * 30);
+    --innerSpace: calc(var(--compSp) * 15);
+  }
 }
 
 /* base */
 body {
   color: var(--black);
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
   overflow-x: hidden;
   word-break: break-all;
-  letter-spacing: .02em;
-  line-height: 1;
 }
 img {
   display: block;
   max-width :100%;
-	width: 100%;
+  width: 100%;
+  height: 100%;
 	object-fit: cover;
 }
 picture {
@@ -38,21 +71,29 @@ picture {
 }
 a:hover {
   opacity: .8;
-  transition: opacity .3s;
+  transition: opacity .4s;
 }
 
-/* pc */
-@media (min-width: 769px) {
-  p,li,dd {
-    line-height: 1.8;
-    font-size: 16px;
-  }
+/* dispay */
+.uPcOnly {
+  display: block;
 }
-
-/* sp */
-@media (max-width: 768px) {
-  p,li,dd {
-    line-height: 1.8;
-    font-size: calc(var(--comp) * 18);
-  }
+.uSpOnly {
+  display: none;
+}
+.uPcOnlyIb {
+  display: inline-block;
+}
+.uSpOnlyIb {
+  display: none;
+}
+/* typo */
+p,li,dd,blockquote {
+  line-height: 1.8;
+  font-size: var(--base);
+  font-weight: 400;
+}
+h1,h2,h3,h4,h5 {
+  line-height: 1.6;
+  font-weight: 700;
 }

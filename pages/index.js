@@ -7,7 +7,6 @@ import Container from 'components/container'
 import Posts from 'components/posts'
 import Pagination from 'components/pagination'
 import { eyecatchLocal } from 'lib/constants'
-// import { getPlaiceholder } from 'plaiceholder'
 
 export default function Home( {posts} ) {
   return (
@@ -16,8 +15,9 @@ export default function Home( {posts} ) {
       <Container>
         <Hero
           title="DevHoly"
-          subtitle="アウトプットしていくサイト"
+          subtitle="フロントエンドとweb制作の備忘録"
           imageOn
+          topPage
         />
         <Posts
           posts={posts}
@@ -37,8 +37,6 @@ export async function getStaticProps() {
     if (!post.hasOwnProperty('eyecatch')) {
       post.eyecatch = eyecatchLocal
     }
-    // const { base64 } = await getPlaiceholder(post.eyecatch.url)
-    // post.eyecatch.blurDataURL = base64
   }
 
   return {

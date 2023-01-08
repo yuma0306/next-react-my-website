@@ -10,17 +10,34 @@
     text-align: center;
   }
   .title {
-    composes: uH1 from './utils.module.css';
+    font-size: var(--ttlHero);
+    font-weight: 700;
+    letter-spacing: .15em;
   }
   .subtitle {
-    composes: uSubTtl from './utils.module.css';
+    font-size: var(--medium)
   }
   .pic {
     width: 55%;
+    margin-top: calc(-1 * var(--layoutSpace));
   }
 }
 
 /* sp */
 @media (max-width: 768px) {
+  .title {
+    font-size: var(--ttlHero);
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-align: center;
+  }
+  .subtitle {
+    margin-top: calc(var(--compSp) * 5);
+    font-size: var(--medium);
+    text-align: center;
+  }
+  .pic {
+    margin: calc(var(--compSp) * -10) calc(var(--compSp) * -15) 0;
+  }
 }
 

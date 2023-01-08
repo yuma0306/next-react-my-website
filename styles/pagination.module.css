@@ -1,8 +1,9 @@
 /* pc */
 @media (min-width: 769px) {
   .flexContainer {
-    composes: spaceBetween from 'styles/utils.module.css';
-    margin-top: min(var(--compPc) * 80, 80px);;
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--contentSpace);
     gap: 1em;
   }
   .next {
@@ -12,5 +13,27 @@
     display: flex;
     align-items: center;
     gap: 0.5em;
+    text-decoration: underline;
+    color: var(--grayDeep);
   }
 }
+
+/* sp */
+@media (max-width: 768px) {
+  .flexContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--contentSpace);
+    gap: 1em;
+  }
+  .next {
+    margin-left: auto;
+  }
+  .iconText {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    text-decoration: underline;
+  }
+}
+

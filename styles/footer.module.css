@@ -1,12 +1,19 @@
 /* pc */
 @media (min-width: 769px) {
   .wrapper {
-    margin-top: min(var(--compPc) * 90, 90px);
-    padding: min(var(--compPc) * 80, 80px) 0;
-    background-color: var(--gray-10);
+    background-color: var(--grayLight);
   }
   .flexContainer {
-    composes: sideBySideCenter from './utils.module.css';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     gap: 2em;
+  }
+}
+
+/* sp */
+@media (max-width: 768px) {
+  .wrapper {
+    background-color: var(--grayLight);
   }
 }

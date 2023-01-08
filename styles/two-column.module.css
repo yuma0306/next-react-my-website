@@ -1,24 +1,24 @@
-.flexContainer {
-  composes: sideBySide from './utils.module.css';
-  gap: var(--space-md);
-  margin: var(--space-md) 0 var(--space-lg);
-}
-
-@media (min-width: 768px) {
+@media (min-width: 769px) {
+  .flexContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50;
+  }
   .main {
-    width: 768px;
+    width: var(--mainSpace);
   }
   .sidebar {
     position: sticky;
-    top: 40px;
+    top: 10px;
     align-self: flex-start;
-    width: 240px;
+    width: var(--sidebarSpace);
   }
   .sidebar * {
     text-align: right;
   }
   .sidebar :is(div, ul) {
-    width: fit-content;
+    width: 100%;
     margin-left: auto;
     place-items: flex-end;
     place-content: flex-end;

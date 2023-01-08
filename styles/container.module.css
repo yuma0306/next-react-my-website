@@ -1,7 +1,24 @@
 /* pc */
 @media (min-width: 769px) {
   .default {
-    width: min(var(--compPc) * 1152, 1152px);
+    width: var(--innerSpace);
     margin: 0 auto;
+    padding: var(--layoutSpace) 0;
+  }
+  .header {
+    composes: default;
+    padding: 0;
+  }
+}
+
+/* sp */
+@media (max-width: 768px) {
+  .default {
+    margin: 0 auto;
+    padding:  var(--layoutSpace) var(--innerSpace) var(--layoutSpace);
+  }
+  .header {
+    composes: default;
+    padding: 0 var(--innerSpace);
   }
 }

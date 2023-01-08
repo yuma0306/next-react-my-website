@@ -1,9 +1,8 @@
 /* デスクトップ */
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .btn {
     display: none;
   }
-
   .list {
     display: flex;
     gap: 2em;
@@ -11,21 +10,21 @@
 }
 
 /* モバイル */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   /* ボタン */
   .btn {
     all: unset;
     outline: revert;
     -webkit-tap-highlight-color: transparent;
     cursor: pointer;
-    width: 42px;
-    height: 42px;
+    width: calc(var(--compSp) * 42);
+    height: calc(var(--compSp) * 42);
     position: relative;
     z-index: 200;
   }
 
   .close .btn {
-    color: var(--gray-75);
+    color: var(--grayDeep);
   }
 
   .open .btn {
@@ -44,17 +43,17 @@
     grid-area: 1 / 1;
     content: '';
     display: block;
-    width: 32px;
+    width: calc(var(--compSp) * 32);
     height: 1px;
     background-color: currentColor;
     transition: transform 0.4s;
   }
 
   .close .btn::before {
-    transform: translateY(-8px);
+    transform: translateY(calc(var(--compSp) * -8));
   }
   .close .btn::after {
-    transform: translateY(8px);
+    transform: translateY(calc(var(--compSp) * 8));
   }
 
   .open .btn::before {
@@ -84,7 +83,7 @@
   /* メニュー（オーバーレイ内の配置） */
   .list {
     display: grid;
-    gap: 40px;
+    gap: calc(var(--compSp) * 40);
     place-content: center;
     text-align: center;
   }
