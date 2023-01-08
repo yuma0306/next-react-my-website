@@ -6,13 +6,13 @@ import { faFolderOpen } from '@fortawesome/free-regular-svg-icons'
 export default function PostCategories({ categories }) {
   return (
     <div className={styles.flexContainer}>
-      <h3 className={styles.heading}>
+      <div className={styles.heading}>
         <FontAwesomeIcon icon={faFolderOpen} />
         <span className="sr-only">Categories</span>
-      </h3>
+      </div>
       <ul className={styles.list}>
         {categories.map(({ name, slug }) => (
-          <li key={slug}>
+          <li className={styles.item} key={slug}>
             <Link href={`/blog/category/${slug}`}>
               {name}
             </Link>

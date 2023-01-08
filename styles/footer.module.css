@@ -1,9 +1,19 @@
-.wrapper {
-  padding: var(--space-xl) 0;
-  background-color: var(--gray-10);
+/* pc */
+@media (min-width: 769px) {
+  .wrapper {
+    background-color: var(--grayLight);
+  }
+  .flexContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+  }
 }
 
-.flexContainer {
-  composes: sideBySideCenter from './utils.module.css';
-  gap: 2em;
+/* sp */
+@media (max-width: 768px) {
+  .wrapper {
+    background-color: var(--grayLight);
+  }
 }

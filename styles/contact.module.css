@@ -1,8 +1,25 @@
-.stack > * + * {
-  margin-top: var(--stack-space, 1em);
+/* pc */
+@media (min-width: 769px) {
+  .stack > * + * {
+    margin-top: 1em;
+  }
+  .heading {
+    font-size: var(--medium);
+    font-weight: 700;
+  }
 }
 
-.heading {
-  font-size: var(--body);
-  /* padding-top: calc(var(--comp) * 10); */
+/* sp */
+@media (max-width: 768px) {
+  .stack {
+    margin-top: var(--contentSpace);
+  }
+  .stack > * + * {
+    margin-top: 1em;
+  }
+  .heading {
+    font-size: var(--ttl02);
+    font-weight: 700;
+  }
 }
+

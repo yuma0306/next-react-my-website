@@ -1,9 +1,24 @@
-.default {
-  width: min(92%, 1152px);
-  margin: 0 auto;
+/* pc */
+@media (min-width: 769px) {
+  .default {
+    width: var(--innerSpace);
+    margin: 0 auto;
+    padding: var(--layoutSpace) 0;
+  }
+  .header {
+    composes: default;
+    padding: 0;
+  }
 }
 
-.large {
-  composes: default;
-  max-width: 1280px;
+/* sp */
+@media (max-width: 768px) {
+  .default {
+    margin: 0 auto;
+    padding:  var(--layoutSpace) var(--innerSpace) var(--layoutSpace);
+  }
+  .header {
+    composes: default;
+    padding: 0 var(--innerSpace);
+  }
 }

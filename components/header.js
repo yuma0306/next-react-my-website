@@ -6,7 +6,7 @@ import Container from '/components/container'
 export default function Header() {
   return (
     <header>
-      <Container large>
+      <Container header>
         <div className={styles.flexContainer}>
           <Logo boxOn />
           <Nav />

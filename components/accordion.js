@@ -18,14 +18,14 @@ export default function Accordion({ heading, children }) {
   const refText = useRef(null)
 
   return (
-    <div className={textIsOpen ? styles.open : styles.close}>
-      <h3 className={styles.heading}>
+    <dl className={textIsOpen ? styles.open : styles.close}>
+      <dt className={styles.heading}>
         <button onClick={toggleText}>
           {heading}
           <FontAwesomeIcon icon={faCircleChevronDown} className={styles.icon} />
         </button>
-      </h3>
-      <div
+      </dt>
+      <dd
         className={styles.text}
         ref={refText}
         style={{
@@ -35,8 +35,8 @@ export default function Accordion({ heading, children }) {
         }}
       >
         <div className={styles.textInner}>{children}</div>
-      </div>
-    </div>
+      </dd>
+    </dl>
   )
 }
 

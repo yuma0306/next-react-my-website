@@ -1,17 +1,43 @@
-.flexContainer {
-  composes: sideBySideCenter from 'styles/utils.module.css'
+/* pc */
+@media (min-width: 769px) {
+  .flexContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .block {
+    width: 45%;
+    text-align: center;
+  }
+  .title {
+    font-size: var(--ttlHero);
+    font-weight: 700;
+    letter-spacing: .15em;
+  }
+  .subtitle {
+    font-size: var(--medium)
+  }
+  .pic {
+    width: 55%;
+    margin-top: calc(-1 * var(--layoutSpace));
+  }
 }
 
-.text {
-  padding: calc(var(--display)) 0 calc(var(--display) * 0.7);
+/* sp */
+@media (max-width: 768px) {
+  .title {
+    font-size: var(--ttlHero);
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-align: center;
+  }
+  .subtitle {
+    margin-top: calc(var(--compSp) * 5);
+    font-size: var(--medium);
+    text-align: center;
+  }
+  .pic {
+    margin: calc(var(--compSp) * -10) calc(var(--compSp) * -15) 0;
+  }
 }
 
-.title {
-  font-size: var(--display);
-  font-weight: 900;
-  letter-spacing: .15em;
-}
-
-.subtitle {
-  font-size: var(--small-heading2);
-}

@@ -1,9 +1,14 @@
 // modules
 import Image from 'next/legacy/image'
 // import { getPlaiceholder } from 'plaiceholder'
+// heighlight
+import { load } from 'cheerio';
+import hljs from 'highlight.js';
+// import 'highlight.js/styles/vs2015.css';
 // lib
 import { getPostBySlug, getAllSlugs } from 'lib/api'
 import { extractText } from 'lib/extractText'
+import { heightLight } from 'lib/heightLight'
 import { prevNextPost } from 'lib/prevNextPost'
 import { eyecatchLocal } from 'lib/constants'
 // components
@@ -36,43 +41,30 @@ export default function Post({
         pageImgH={eyecatch.height}
       />
       <Container>
-        <article>
-          <PostHeader
-            title={title}
-            subtitle='Blog Article'
-            publish={publish}
-          />
-          <picture>
-            <Image
-              src={eyecatch.url}
-              alt=''
-              layout='responsive'
-              width={eyecatch.width}
-              height={eyecatch.height}
-              sizes='(min-width: 1152px) 1152px, 100vw'
-              priority
-              // placeholder='blur'
-              // blurDataURL={eyecatch.blurDataURL}
-            />
-          </picture>
-
-          <TwoColumn>
-            <TwoColumnMain>
-              <PostBody>
-                <ConvertBody contentHTML={content} />
-              </PostBody>
-            </TwoColumnMain>
-            <TwoColumnSidebar>
-              <PostCategories categories={categories} />
-            </TwoColumnSidebar>
-          </TwoColumn>
-          <Pagination
-            prevText={prevPost.title}
-            prevUrl={`/blog/${prevPost.slug}`}
-            nextText={nextPost.title}
-            nextUrl={`/blog/${nextPost.slug}`}
-          />
-        </article>
+        <TwoColumn>
+          <TwoColumnMain>
+          <article>
+                <PostHeader
+                  title={title}
+                  subtitle='Blog Article'
+                  publish={publish}
+                  src={eyecatch.url}
+                />
+                <PostBody>
+                  <ConvertBody contentHTML={content} />
+                </PostBody>
+              <Pagination
+                prevText={prevPost.title}
+                prevUrl={`/blog/${prevPost.slug}`}
+                nextText={nextPost.title}
+                nextUrl={`/blog/${nextPost.slug}`}
+              />
+          </article>
+          </TwoColumnMain>
+          <TwoColumnSidebar>
+            <PostCategories categories={categories} />
+          </TwoColumnSidebar>
+        </TwoColumn>
       </Container>
     </>
   )
@@ -92,8 +84,6 @@ export async function getStaticProps(context) {
   const post = await getPostBySlug(slug)
   const description = extractText(post.content)
   const eyecatch = post.eyecatch ?? eyecatchLocal
-  // const { base64 } = await getPlaiceholder(eyecatch.url)
-  // eyecatch.blurDataURL = base64;
   const allSlugs = await getAllSlugs()
   const [prevPost, nextPost] = prevNextPost(allSlugs, slug)
 

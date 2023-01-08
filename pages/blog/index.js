@@ -18,7 +18,6 @@ export default function Blog({ posts }) {
       <Container>
         <Hero
           title="Blog"
-          subtitle="Recent Posts"
         />
         <Posts posts={posts} />
       </Container>
