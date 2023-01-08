@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 
 // サイトに関する情報
 import { siteMeta } from 'lib/constants'
-const { siteTitle, siteDesc, siteUrl, siteLocale, siteType, siteIcon } = siteMeta
+const { siteTitle, siteDesc, siteUrl, siteLocale, siteType, siteIcon, appleTouch, androidManifest } = siteMeta
 
 // 汎用OGP
 import siteImg from '/images/ogp.jpg'
@@ -31,7 +31,8 @@ export default function Meta({ pageTitle, pageDesc, pageImg, pageImgW, pageImgH 
       <link rel="canonical" href={url} />
       {/* favicon */}
       <link rel="icon" href={siteIcon} />
-      <link rel="apple-touch-icon" href={siteIcon} />
+      <link rel="apple-touch-icon" href={appleTouch} />
+      <link rel="manifest" href={androidManifest} />
       {/* ogp */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={desc} />
@@ -40,8 +41,8 @@ export default function Meta({ pageTitle, pageDesc, pageImg, pageImgW, pageImgH 
       <meta property="og:type" content={siteType} />
       <meta property="og:locale" content={siteLocale} />
       <meta property="og:image" content={imgUrl} />
-      <meta property="og:image:width" content={imgW} />
-      <meta property="og:image:height" content={imgH} />
+      {/* <meta property="og:image:width" content={imgW} />
+      <meta property="og:image:height" content={imgH} /> */}
       <meta name="twitter:card" content="summary_large_image" />
     </Head>
   )
