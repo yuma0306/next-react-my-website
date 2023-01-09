@@ -76,6 +76,11 @@
   .stack {
     padding: var(--contentSpace) 0 0;
   }
+  .stack iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
   .stack > * + * {
     margin-top: 1.5em;
   }
