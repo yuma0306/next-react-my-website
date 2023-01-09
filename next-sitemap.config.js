@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 const config = {
-  siteUrl: 'https://hoge.com',
+  siteUrl: 'https://dev-holy.com',
   outDir: './out',
 }
 
