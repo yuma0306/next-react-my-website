@@ -8,7 +8,7 @@
   }
   .post h2 {
     margin-top: 10px;
-    font-size: var(--medium);
+    font-size: var(--base);
     font-weight: 400;
   }
   .post picture {
@@ -28,7 +28,7 @@
   }
   .post h2 {
     margin-top: calc(var(--compSp) * 10);
-    font-size: var(--medium);
+    font-size: var(--base);
     font-weight: 400;
   }
   .post picture {
