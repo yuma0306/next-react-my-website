@@ -10,6 +10,31 @@
     height: auto;
     aspect-ratio: 16/9;
   }
+  .stack blockquote {
+    position: relative;
+    padding: 45px 30px;
+    background: var(--grayLight);
+  }
+  .stack blockquote:before,
+  .stack blockquote:after {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: url(../public/blockquote_icon.png) no-repeat center/contain;
+    content: "";
+  }
+  .stack blockquote:before {
+    top: 5px;
+    left: 10px;
+    transform: rotate(180deg);
+  }
+  .stack blockquote:after {
+    bottom: 5px;
+    right: 10px;
+  }
+  .stack blockquote span {
+    aspect-ratio: 16/9;
+  }
   .stack h2 {
     position: relative;
     padding: 15px;
@@ -35,11 +60,14 @@
   .stack h4 {
     font-weight: bold;
   }
+  .stack pre:has(code) {
+    background: var(--black02);
+    color: var(--white);
+    overflow-x: scroll;
+  }
   .stack pre code {
     display: block;
     padding: 10px;
-    background: var(--black02);
-    color: var(--white);
     line-height: 1.8;
   }
   .stack a {
@@ -81,6 +109,31 @@
     height: auto;
     aspect-ratio: 16/9;
   }
+  .stack blockquote {
+    position: relative;
+    padding: calc(var(--compSp) * 40) calc(var(--compSp) * 10);
+    background: var(--grayLight);
+  }
+  .stack blockquote:before,
+  .stack blockquote:after {
+    position: absolute;
+    width: calc(var(--compSp) * 30);
+    height: calc(var(--compSp) * 30);
+    background: url(../public/blockquote_icon.png) no-repeat center/contain;
+    content: "";
+  }
+  .stack blockquote:before {
+    top: calc(var(--compSp) * 5);
+    left: calc(var(--compSp) * 10);
+    transform: rotate(180deg);
+  }
+  .stack blockquote:after {
+    bottom: calc(var(--compSp) * 5);
+    right: calc(var(--compSp) * 10);
+  }
+  .stack blockquote span {
+    aspect-ratio: 16/9;
+  }
   .stack > * + * {
     margin-top: 1.5em;
   }
@@ -109,11 +162,14 @@
   .stack h4 {
     font-weight: bold;
   }
+  .stack pre:has(code) {
+    background: var(--black02);
+    color: var(--white);
+    overflow-x: scroll;
+  }
   .stack pre code {
     display: block;
     padding: calc(var(--compSp) * 10);
-    background: var(--black02);
-    color: var(--white);
     line-height: 1.8;
   }
   .stack a {

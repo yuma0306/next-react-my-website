@@ -9,7 +9,8 @@
   --mainColor: #43964A;
   --deepColor: darkgreen;
   --white: #fff;
-  --grayLight: #eee;
+  /* --grayLight: #eee; */
+  --grayLight: #f5f5f5;
   --grayMedium: #aaa;
   --grayDeep: #707070;
   --black: #333;
