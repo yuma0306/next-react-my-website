@@ -5,9 +5,6 @@ import { useRouter } from 'next/router'
 import { siteMeta } from 'lib/constants'
 const { siteTitle, siteDesc, siteUrl, siteLocale, siteType, siteImg, siteIcon, appleTouch, androidManifest } = siteMeta
 
-// 汎用OGP
-// import siteImg from '/images/ogp.jpg'
-
 export default function Meta({ pageTitle, pageDesc, }) {
   const title = pageTitle ? `${pageTitle} | ${siteTitle}` : siteTitle;
   const desc = pageDesc ?? siteDesc;
@@ -29,11 +26,11 @@ export default function Meta({ pageTitle, pageDesc, }) {
       {/* ogp */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={desc} />
-      <meta property="og:url" content={url} />
+      <meta property="og:url" content={siteUrl} />
       <meta property="og:site_name" content={siteTitle} />
       <meta property="og:type" content={siteType} />
       <meta property="og:locale" content={siteLocale} />
-      <meta property="og:image" content={siteImg} />
+      <meta property="og:image" content={siteUrl + siteImg} />
       <meta name="twitter:card" content="summary_large_image" />
     </Head>
   )
